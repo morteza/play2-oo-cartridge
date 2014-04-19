@@ -2,19 +2,23 @@ Name: play2
 Cartridge-Short-Name: Play2
 Display-Name: Play 2.2.2
 Description: "The High Velocity Web Framework For Java and Scala"
-Version: '2.2.2'
+Version: "2.2.2"
 Source-Url: https://github.com/smarterclayton/openshift-go-cart/archive/master.zip
+Website: https://github.com/ratnic/play-cartridge/
 License: "MIT"
 Vendor: "none"
-Cartridge-Version: '2.2.2'
+Cartridge-Version: 2.2.2
 Cartridge-Vendor: ratnic
 Categories:
   - service
   - play
-  - scala
+  - java
   - web_framework
 Provides:
-  - play2
+  - "play2"
+  - "play2 (version) = 2.2.2"
+  - "play2 (version) = 2.2"
+  - "play2 (version) = 2"  
 Scaling:
   Min: 1
   Max: -1
@@ -62,6 +66,12 @@ Publishes:
 Subscribes:
   set-db-connection-info:
     Type: "ENV:NET_TCP:db:connection-info"
+    Required: false
+  set-postgres-connection-info:
+    Type: "ENV:NET_TCP:db:postgres"
+    Required: false
+  set-mysql-connection-info:
+    Type: "ENV:NET_TCP:db:mysql"
     Required: false
   set-nosql-db-connection-info:
     Type: "ENV:NET_TCP:nosqldb:connection-info"
