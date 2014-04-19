@@ -17,10 +17,5 @@ In OpenShift, choose a downloaded cartridge, with the following URL : [http://gi
 
 ## Copyright and license
 
-
-#### Bootstrap RTL
 See the file [LICENSE](LICENSE) for the full license governing this project.
-
-#### Bootstrap
-&copy; 2013 Twitter, Inc. Under [the Apache 2.0 license](LICENSE.bootstrap).
 
