@@ -1,18 +1,17 @@
 Name: play2
 Cartridge-Short-Name: Play2
-Display-Name: Play 2.2.2
-Description: "The High Velocity Web Framework For Java and Scala"
-Version: 2.2.2
+Display-Name: Play! Framework 2.2.2
+Description: The High Velocity Web Framework For Java and Scala
+Version: '2.2.2'
 Source-Url: https://github.com/smarterclayton/openshift-go-cart/archive/master.zip
 Website: https://github.com/ratnic/play-cartridge/
-License: "MIT"
-Vendor: "none"
-Cartridge-Version: 2.2.2
+License: ASL 2.0
+Vendor: playframework
+Cartridge-Version: 0.0.1
 Cartridge-Vendor: ratnic
 Categories:
-  - service
-  - java
   - web_framework
+  - experimental
 Provides:
   - play
   - play2
@@ -21,7 +20,7 @@ Provides:
   - play2 (version) = 2
 Scaling:
   Min: 1
-  Max: -1
+  Max: 1
 Cart-Data:
   - Key: OPENSHIFT_PLAY2_LOG_DIR
     Type: environment
@@ -64,6 +63,9 @@ Publishes:
   publish-gear-endpoint:
     Type: NET_TCP:gear-endpoint-info
 Subscribes:
+  set-env:
+    Type: ENV:*
+    Required: false
   set-db-connection-info:
     Type: ENV:NET_TCP:db:connection-info
     Required: false
@@ -81,10 +83,17 @@ Endpoints:
     Private-Port-Name: PORT
     Private-Port:      8080
     Public-Port-Name:  PROXY_PORT
+    Protocols:
+    - http
+    - ws
+    Options:
+      primary: true
     Mappings:
       - Frontend:      ''
         Backend:       ''
-        Options:       { websocket: true }
+        Options:       
+          websocket: true
       - Frontend:      /health
         Backend:       ''
-        Options:       { health: true }
+        Options:
+          health: true
