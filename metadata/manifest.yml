@@ -3,6 +3,7 @@ Cartridge-Short-Name: Play2
 Display-Name: Play 2.2.2
 Description: "The High Velocity Web Framework For Java and Scala"
 Version: '2.2.2'
+Source-Url: git@github.com:ratnic/play2-cartridge.git
 License: "MIT"
 Vendor: "none"
 Cartridge-Version: '2.2.2'
