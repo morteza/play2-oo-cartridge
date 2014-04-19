@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# Start the application httpd instance
-
-# Exit on any errors
+# Exit on any errors.
 set -e
 
 # Get gear ip address.
