@@ -6,7 +6,7 @@ Based on the latest [Play! Web Framework 2](http://www.playframework.com/).
 
 ### Installation
 
-In OpenShift, choose a downloaded cartridge, with the following manifest URL : **https://raw.github.com/ratnic/play2-cartridge/master/metadata/manifest.yml**
+In OO, choose download the cartridge, with the following manifest URL : **https://raw.github.com/morteza/play2-oo-cartridge/master/metadata/manifest.yml**
 ### Author
 
 **Morteza Ansarinia**
@@ -16,5 +16,5 @@ In OpenShift, choose a downloaded cartridge, with the following manifest URL : *
 
 ### Copyright and license
 
-(c) 2014 Ratnic. See the file [LICENSE](LICENSE) for the full license governing this project.
+(c) 2014 Morteza Ansarinia. See the file [LICENSE](LICENSE) for the full license governing this project.
 
